@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import PropTypes from 'prop-types';
 
-function ListarProdutos() {
+function ListarProdutos(props) {
   const produtos = [
     { nome: 'Aprenda Java', preco: 'R$ 59,99' },
     { nome: 'JavaScript em 24 horas', preco: 'R$ 19,99' },
@@ -36,7 +36,7 @@ function ListarProdutos() {
           <Card.Title style={{ height: '40px' }}>{produto.nome}</Card.Title>
           <Card.Text>Descricação do produto aqui...</Card.Text>
           <Button
-            variant="sucess"
+            variant="success"
             style={{ width: '100%' }}
             onClick={(event) => handleComprar(event, produto)}
           >
